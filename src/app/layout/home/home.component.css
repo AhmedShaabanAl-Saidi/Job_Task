@@ -1,0 +1,116 @@
+/* general */
+.bg-main {
+    background-color: #F9F5F3;
+}
+
+.text-main {
+    color: #F4DBD4;
+}
+
+.bg-second {
+    background-color: #FF7F5C;
+}
+
+.bg-second-muted {
+    background-color: #F4DBD4;
+}
+
+.color-second {
+    color: #FF7F5C;
+}
+
+.total-sales-color {
+    color: #5CDED7;
+}
+
+.fs-8 {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* grad layout */
+.layout {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1.3fr 1.3fr 0.4fr 0.1fr 4.4fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    color: #435666;
+}
+
+.nav {
+    grid-area: 1 / 1 / 2 / 12;
+}
+
+.sidebar {
+    grid-area: 1 / 1 / 11 / 2;
+}
+
+.sales {
+    grid-area: 2 / 9 / 11 / 12;
+}
+
+.cards {
+    grid-area: 2 / 2 / 4 / 9;
+}
+
+.buttons {
+    grid-area: 4 / 2 / 6 / 9;
+}
+
+.stations {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "station1 station1 station1"
+        "station2 station2 station2"
+        "station3 station3 station3";
+    grid-area: 6 / 2 / 12 / 9;
+}
+
+.station1 {
+    grid-area: station1;
+}
+
+.station2 {
+    grid-area: station2;
+}
+
+.station3 {
+    grid-area: station3;
+}
+
+/* navbar */
+.station-name,
+.date-start span {
+    font-size: 10px;
+}
+
+.station-name {
+    line-height: 12px;
+}
+
+.fa-3xs {
+    font-size: 8px;
+}
+
+.fa-xsm {
+    font-size: 20px;
+}
+
+.section-content{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* sales */
+.progress-bar{
+    background-color: #FF7F5C;
+}
+
+.progress{
+    height: 10px;
+}

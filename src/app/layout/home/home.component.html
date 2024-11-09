@@ -1,0 +1,321 @@
+<div class="home bg-main">
+    <div class="layout">
+        <div class="nav bg-white d-flex justify-content-center align-items-center fw-semibold">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2 d-flex">
+                        <div class="nav-icons d-flex align-items-baseline me-2">
+                            <i class="fa-solid fa-circle color-second fa-3xs me-2 p-0"></i>
+                            <i class="fa-solid fa-gas-pump fa-2x"></i>
+                        </div>
+
+                        <div class="station-content d-flex justify-content-center align-items-center">
+                            <span class="fs-4">2/3</span>
+                            <span class="ms-1 station-name">Monitored <br> Stations</span>
+                        </div>
+                    </div>
+                    <div class="col-2 d-flex">
+                        <div class="nav-icons d-flex align-items-baseline me-2">
+                            <i class="fa-solid fa-circle color-second fa-3xs me-2 p-0"></i>
+                            <i class="fa-solid fa-rotate-right fa-2x"></i>
+                        </div>
+
+                        <div class="station-content d-flex justify-content-center align-items-center">
+                            <span class="fs-4">20s</span>
+                            <span class="ms-1 station-name">Last <br> Update</span>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="days rounded-pill p-1 text-center m-auto bg-main text-uppercase">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="today bg-second rounded-pill text-white p-1">
+                                        <span>today</span>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="yesterday text-secondary p-1">
+                                        <span>yesterday</span>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="last-week text-secondary p-1">
+                                        <span>last week</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="start-date d-flex align-items-center justify-content-center">
+                            <div class="start-icon">
+                                <i class="fa-solid fa-caret-right color-second fa-xsm"></i>
+                            </div>
+
+                            <div
+                                class="start-date-inner border-bottom border-black d-flex justify-content-between align-items-center p-1 ms-2">
+                                <div class="date fa-2xs me-4">
+                                    <span><strong>Start</strong> date-time</span>
+                                </div>
+                                <div class="icon ms-5">
+                                    <i class="fa-regular fa-calendar-days"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="end-date d-flex align-items-center justify-content-center">
+                            <div class="start-icon">
+                                <i class="fa-solid fa-stop color-second fa-xsm"></i>
+                            </div>
+
+                            <div
+                                class="start-date-inner border-bottom border-black d-flex justify-content-between align-items-center p-1 ms-2">
+                                <div class="date fa-2xs me-4">
+                                    <span><strong>End</strong> date-time</span>
+                                </div>
+                                <div class="icon ms-5">
+                                    <i class="fa-regular fa-calendar-days"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="sidebar bg-second rounded-end-5 text-main d-flex justify-content-between align-items-center flex-column p-4 fs-3 me-3">
+            <div class="icon-start">
+                <i class="fa-solid fa-droplet"></i>
+            </div>
+            <div class="icon-meddle d-flex justify-content-center align-content-center flex-column gap-4">
+                <i class="fa-solid fa-gauge-high"></i>
+                <i class="fa-solid fa-sliders text-white"></i>
+                <i class="fa-solid fa-layer-group"></i>
+                <i class="fa-solid fa-gear"></i>
+                <i class="fa-solid fa-bell"></i>
+            </div>
+            <div class="icon-end">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </div>
+        </div>
+        <div class="sales">
+            <h4 class="fw-bold text-center my-5">Hourly Sales</h4>
+            <canvas id="radarChart"></canvas>
+
+            <h5 class="fw-bold text-center my-5">Sales by Stations</h5>
+
+            <div class="station-progress1">
+                <div class="station-data d-flex justify-content-between align-items-center px-5 pb-2">
+                    <div class="station-names">
+                        <span><i class="fa-solid fa-gas-pump fa-2x me-2"></i> Station Name</span>
+                    </div>
+                    <div class="station-numbers">
+                        <span>62,721 m<sup>3</sup></span>
+                    </div>
+                </div>
+
+                <div class="progress bg-second-muted m-5 mt-0" role="progressbar" aria-label="Basic example"
+                    aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 50%"></div>
+                </div>
+            </div>
+
+            <div class="station-progress2">
+                <div class="station-data d-flex justify-content-between align-items-center px-5 pb-2">
+                    <div class="station-names">
+                        <span><i class="fa-solid fa-gas-pump fa-2x me-2"></i> Station Name</span>
+                    </div>
+                    <div class="station-numbers">
+                        <span>62,721 m<sup>3</sup></span>
+                    </div>
+                </div>
+
+                <div class="progress bg-second-muted m-5 mt-0" role="progressbar" aria-label="Basic example"
+                    aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 50%"></div>
+                </div>
+            </div>
+
+            <div class="station-progress3">
+                <div class="station-data d-flex justify-content-between align-items-center px-5 pb-2">
+                    <div class="station-names">
+                        <span><i class="fa-solid fa-gas-pump fa-2x me-2"></i> Station Name</span>
+                    </div>
+                    <div class="station-numbers">
+                        <span class="text-secondary">NM</span>
+                    </div>
+                </div>
+
+                <div class="progress bg-secondary m-5 mt-0" role="progressbar" aria-label="Basic example"
+                    aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+        <div class="cards m-5">
+            <div class="row">
+                <div class="col-3">
+                    <div class="card border-0 rounded-4 bg-second-muted">
+                        <div class="card-body text-muted">
+                            <h5 class="card-title"><span class="fs-2">71,028</span> EGP</h5>
+                            <h6 class="card-subtitle mb-2">Total value</h6>
+                            <span class="color-second"><i class="fa-solid fa-caret-down"> </i> 2%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card border-0 rounded-4">
+                        <div class="card-body text-muted">
+                            <h5 class="card-title"><span class="fs-2">20,000</span> m<sup>3</sup></h5>
+                            <h6 class="card-subtitle mb-2">Total Sales</h6>
+                            <span class="total-sales-color"><i class="fa-solid fa-caret-up"></i> 50m<sup>2</sup></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card border-0 rounded-4">
+                        <div class="card-body text-muted">
+                            <h5 class="card-title"><span class="fs-2">20,000</span> m<sup>3</sup></h5>
+                            <h6 class="card-subtitle mb-2">Avg Sales</h6>
+                            <span class="color-second"><i class="fa-solid fa-caret-down"></i> 50m<sup>2</sup></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card border-0 rounded-4">
+                        <div class="card-body text-muted">
+                            <h5 class="card-title"><span class="fs-2">1567</span></h5>
+                            <h6 class="card-subtitle fs-8">Total transaction <br> count</h6>
+                            <span class="total-sales-color"><i class="fa-solid fa-caret-up"></i> 20</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <div
+                class="buttons-card w-25 rounded-pill bg-white p-2 me-5 ms-auto d-flex justify-content-between align-content-center">
+                <div class="graph">
+                    <div class="btn m-0 p-0">
+                        <span class="text-uppercase p-2"> <i class="fa-solid fa-chart-simple"></i> graph</span>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="btn m-0 p-0">
+                        <span class="text-uppercase bg-second px-4 py-1 rounded-pill"><i class="fa-solid fa-list"></i>
+                            list</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stations mb-5">
+            <div class="station1 bg-white mt-4 me-5 ms-5 rounded-4">
+                <div class="title border-bottom m-3 d-flex justify-content-between align-content-center">
+                    <div class="title-content color-second d-flex align-items-baseline me-2">
+                        <i class="fa-solid fa-circle fa-3xs me-2 p-0"></i>
+                        <i class="fa-solid fa-gas-pump fa-2x"></i>
+
+                        <h6 class="text-uppercase text-muted ms-2 fw-bold align-self-center">station name <br>dummy</h6>
+                    </div>
+                    <div class="title-bar">
+                        <div class="btn"><i class="fa-solid fa-ellipsis"></i></div>
+                    </div>
+                </div>
+
+                <div class="section-content py-2 px-3">
+                    <div class="row">
+                        <div class="col-2"><span>Total Sales</span></div>
+                        <div class="col-2"><span>62,721 m<sup>3</sup></span></div>
+                        <div class="col-2"><span>Compression State</span></div>
+                        <div class="col-2"><span>Compression</span></div>
+                        <div class="col-2"><span>Max transaction / hour</span></div>
+                        <div class="col-2"><span>20</span></div>
+                    </div>
+                </div>
+                <div class="section-content py-2 px-3">
+                    <div class="row">
+                        <div class="col-2"><span>Total Value</span></div>
+                        <div class="col-2"><span>550 EGP</span></div>
+                        <div class="col-2"><span>Total transaction count</span></div>
+                        <div class="col-2"><span>5161</span></div>
+                        <div class="col-2"><span>Max transaction Date-Time</span></div>
+                        <div class="col-2"><span>8-1-2021 | 10:16 PM</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="station2 bg-white mt-4 me-5 ms-5 rounded-4">
+                <div class="title border-bottom m-3 d-flex justify-content-between align-content-center">
+                    <div class="title-content color-second d-flex align-items-baseline me-2">
+                        <i class="fa-solid fa-circle fa-3xs me-2 p-0"></i>
+                        <i class="fa-solid fa-gas-pump fa-2x"></i>
+
+                        <h6 class="text-uppercase text-muted ms-2 fw-bold align-self-center">station name <br>dummy</h6>
+                    </div>
+                    <div class="title-bar">
+                        <div class="btn"><i class="fa-solid fa-ellipsis"></i></div>
+                    </div>
+                </div>
+
+                <div class="section-content py-2 px-3">
+                    <div class="row">
+                        <div class="col-2"><span>Total Sales</span></div>
+                        <div class="col-2"><span>62,721 m<sup>3</sup></span></div>
+                        <div class="col-2"><span>Compression State</span></div>
+                        <div class="col-2"><span>Compression</span></div>
+                        <div class="col-2"><span>Max transaction / hour</span></div>
+                        <div class="col-2"><span>20</span></div>
+                    </div>
+                </div>
+                <div class="section-content py-2 px-3">
+                    <div class="row">
+                        <div class="col-2"><span>Total Value</span></div>
+                        <div class="col-2"><span>550 EGP</span></div>
+                        <div class="col-2"><span>Total transaction count</span></div>
+                        <div class="col-2"><span>5161</span></div>
+                        <div class="col-2"><span>Max transaction Date-Time</span></div>
+                        <div class="col-2"><span>8-1-2021 | 10:16 PM</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="station3 bg-white mt-4 me-5 ms-5 rounded-4">
+                <div class="title border-bottom m-3 d-flex justify-content-between align-content-center">
+                    <div class="title-content color-second d-flex align-items-baseline me-2">
+                        <i class="fa-solid fa-circle fa-3xs me-2 p-0"></i>
+                        <i class="fa-solid fa-gas-pump fa-2x"></i>
+
+                        <h6 class="text-uppercase text-muted ms-2 fw-bold align-self-center">station name <br>dummy</h6>
+                    </div>
+                    <div class="title-bar">
+                        <div class="btn"><i class="fa-solid fa-ellipsis"></i></div>
+                    </div>
+                </div>
+
+                <div class="section-content py-2 px-3">
+                    <div class="row">
+                        <div class="col-2"><span>Total Sales</span></div>
+                        <div class="col-2"><span>62,721 m<sup>3</sup></span></div>
+                        <div class="col-2"><span>Compression State</span></div>
+                        <div class="col-2"><span>Compression</span></div>
+                        <div class="col-2"><span>Max transaction / hour</span></div>
+                        <div class="col-2"><span>20</span></div>
+                    </div>
+                </div>
+                <div class="section-content py-2 px-3">
+                    <div class="row">
+                        <div class="col-2"><span>Total Value</span></div>
+                        <div class="col-2"><span>550 EGP</span></div>
+                        <div class="col-2"><span>Total transaction count</span></div>
+                        <div class="col-2"><span>5161</span></div>
+                        <div class="col-2"><span>Max transaction Date-Time</span></div>
+                        <div class="col-2"><span>8-1-2021 | 10:16 PM</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
